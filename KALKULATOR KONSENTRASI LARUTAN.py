@@ -25,6 +25,38 @@ halaman = st.sidebar.selectbox("Select Here", ["🔬 Kalkulator Konsentrasi", "�
 # =========================
 # Halaman 1: Kalkulator
 # =========================
+st.markdown(
+    """
+    <style>
+    /* Warna background subheader untuk mode terang */
+    @media (prefers-color-scheme: light) {
+        .subheader-theme {
+            background-color: #e0f0ff;
+            color: #000;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+    }
+
+    /* Warna background subheader untuk mode gelap */
+    @media (prefers-color-scheme: dark) {
+        .subheader-theme {
+            background-color: #1e293b;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 if halaman == "🔬 Kalkulator Konsentrasi":
     st.title("⚗️ Kalkulator Konsentrasi Larutan")
     st.markdown("""
