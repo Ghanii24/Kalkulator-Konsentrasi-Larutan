@@ -139,7 +139,6 @@ elif halaman == "👥 Identitas Kelompok":
                 <li>👨‍🔬 Raihan Ghani Priyananda</li>
                 <li>👩‍🔬 Rifa Novita Putri Sulaeman</li>
             </ul>
-            <p>✨ Terima kasih telah menggunakan aplikasi kami! ✨</p>
         </div>
         """,
         unsafe_allow_html=True
