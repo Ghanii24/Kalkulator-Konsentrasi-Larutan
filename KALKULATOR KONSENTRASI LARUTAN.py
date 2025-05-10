@@ -128,6 +128,7 @@ elif halaman == "👥 Identitas Kelompok":
         background-repeat: no-repeat;
         color: white !important;
     }
+
     
     st.markdown("---")
     st.markdown(
