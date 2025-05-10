@@ -1,4 +1,6 @@
 import streamlit as st
+
+# Konfigurasi halaman utama
 st.markdown(
     """
     <style>
@@ -21,7 +23,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Konfigurasi halaman utama
 st.set_page_config(
     page_title="Kalkulator Konsentrasi Larutan",
     page_icon="⚗️",
