@@ -101,28 +101,18 @@ if halaman == "🔬 Kalkulator Konsentrasi":
             molaritas_massa = hitung_molaritas_dari_massa(massa_zat, mr, volume_larutan)
             st.success(f"✅ Konsentrasi Molaritas: {molaritas_massa:.2f} mol/L")
 
-    # ==========Watermark dengan emotikon==========
-    st.markdown(
-        """
-        <div style="
-            position: relative;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            border-radius: 12px;
-            padding: 15px 25px;
-            color: #333333;
-            font-size: 16px;
-            margin-top: 30px;
-            box-shadow: 2px 2px 12px rgba(0,0,0,0.08);
-            text-align: left;
-        ">
-            <p>🧪✨ <b>Dibuat oleh kelompok:</b></p>
-            <p>👨‍🔬 <b>Andika</b> • 👩‍🔬 <b>Audrey</b> • 👩‍🔬 <b>Maqdalene</b> • 👨‍🔬 <b>Raihan</b> • 👩‍🔬 <b>Rifa</b></p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+st.markdown("""
+    <style>
+    .stApp {
+        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                    url('https://img.freepik.com/free-photo/side-view-hand-pouring-substance_23-2149731486.jpg?t=st=1746860017~exp=1746863617~hmac=f818fce0db537a021c6c9c2795193a245bf11bdb8deb3535c440fc783e29e887&w=1380');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # =========================
 # Halaman 2: Identitas Kelompok
