@@ -78,12 +78,12 @@ if halaman == "🔬 Kalkulator Konsentrasi":
 
     elif "Molaritas (mol/L)" in choice:
         st.subheader("🧪 Perhitungan Molaritas")
-        mol_zat = st.number_input("🧬 Jumlah mol zat (mol)", min_value=0.0, step=0.0001)
-        volume_larutan = st.number_input("🧴 Volume larutan (liter)", min_value=0.0001, step=0.0001)
+        mol_zat = st.number_input("🧬 Jumlah mol zat (mol)", min_value=0.0, step=0.01)
+        volume_larutan = st.number_input("🧴 Volume larutan (liter)", min_value=0.0001, step=0.01)
 
         if st.button("🧮 Hitung Molaritas"):
             molaritas = hitung_molaritas(mol_zat, volume_larutan)
-            st.success(f"✅ Konsentrasi Molaritas: {molaritas:.2f} mol/L")
+            st.success(f"✅ Konsentrasi Molaritas: {molaritas:.4f} mol/L")
 
     elif "Molalitas" in choice:
         st.subheader("⚖️ Perhitungan Molalitas")
