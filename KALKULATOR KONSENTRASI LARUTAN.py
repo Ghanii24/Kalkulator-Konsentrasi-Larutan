@@ -118,6 +118,16 @@ if halaman == "🔬 Kalkulator Konsentrasi":
 # =========================
 elif halaman == "👥 Identitas Kelompok":
     st.title("👥 Identitas Kelompok")
+    st.markdown("""
+    <style>
+    .stApp {
+        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                    url('https://media.quipper.com/media/W1siZiIsIjIwMjMvMDEvMjQvMDQvNDkvNTIvODUxMDg1ZjYtZTNhMS00YzUxLWI0NzAtZDQwNDBkYjE0MWVjL0dlZHVuZyUyMEt1bGlhaC5wbmciXSxbInAiLCJ0aHVtYiIsIjEyMDB4XHUwMDNlIix7fV0sWyJwIiwiY29udmVydCIsIi1jb2xvcnNwYWNlIHNSR0IgLXN0cmlwIix7ImZvcm1hdCI6ImpwZyJ9XV0.jpg?sha=7a34652c177d4cd0');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white !important;
+    }
     st.markdown("---")
     st.markdown(
         """
