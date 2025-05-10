@@ -122,24 +122,24 @@ elif halaman == "👥 Identitas Kelompok":
     st.markdown(
         """
         <div style="
-            background-color: #1e3a8a;  /*white*/
+            background-color: transparent;
             border-radius: 12px;
             padding: 20px;
             color: white;
             font-size: 18px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
             text-align: left;
         ">
-            <p><b>📚 Nama Kelompok:</b> Kelompok 5</p>
-            <p><b>👩‍🔬 Anggota:</b></p>
+            <p><b>📚 Nama Kelompok:</b> Kelompok 2 (PMIP 1E-1)</p>
+            <p><b>👥 Anggota:</b></p>
             <ul>
-                <li>👨‍🔬 Andika</li>
-                <li>👩‍🔬 Audrey</li>
-                <li>👩‍🔬 Maqdalene</li>
-                <li>👨‍🔬 Raihan</li>
-                <li>👩‍🔬 Rifa</li>
+                <li>👨‍🔬 Andika Daffa Arya Putra</li>
+                <li>👩‍🔬 Audrey Arva Callista</li>
+                <li>👩‍🔬 Maqdalene Tri Okta Dinanti Banjarnahor</li>
+                <li>👨‍🔬 Raihan Ghani Priyananda</li>
+                <li>👩‍🔬 Rifa Novita Putri Sulaeman</li>
             </ul>
-            <p>✨ Terima kasih telah menggunakan aplikasi kami! ✨</p>
         </div>
         """,
         unsafe_allow_html=True
-    )
+    )
