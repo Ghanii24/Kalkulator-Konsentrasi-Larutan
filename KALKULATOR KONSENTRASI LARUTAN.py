@@ -6,6 +6,18 @@ st.set_page_config(
     page_icon="⚗️",
     layout="centered"
 )
+st.markdown("""
+    <style>
+    .stApp {
+        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                    url('https://img.freepik.com/free-photo/side-view-hand-pouring-substance_23-2149731486.jpg?t=st=1746860017~exp=1746863617~hmac=f818fce0db537a021c6c9c2795193a245bf11bdb8deb3535c440fc783e29e887&w=1380');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # Sidebar navigasi
 halaman = st.sidebar.selectbox("📂 Navigasi Halaman", ["🔬 Kalkulator Konsentrasi", "👥 Identitas Kelompok"])
@@ -100,19 +112,6 @@ if halaman == "🔬 Kalkulator Konsentrasi":
         if st.button("🧮 Hitung Molaritas dari Massa"):
             molaritas_massa = hitung_molaritas_dari_massa(massa_zat, mr, volume_larutan)
             st.success(f"✅ Konsentrasi Molaritas: {molaritas_massa:.2f} mol/L")
-
-st.markdown("""
-    <style>
-    .stApp {
-        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-                    url('https://img.freepik.com/free-photo/side-view-hand-pouring-substance_23-2149731486.jpg?t=st=1746860017~exp=1746863617~hmac=f818fce0db537a021c6c9c2795193a245bf11bdb8deb3535c440fc783e29e887&w=1380');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: white !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
 
 # =========================
 # Halaman 2: Identitas Kelompok
