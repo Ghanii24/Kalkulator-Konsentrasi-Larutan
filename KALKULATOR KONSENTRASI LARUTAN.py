@@ -26,20 +26,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Sidebar navigasi
-st.sidebar.title("📂 Menu Navigasi")
-menu = st.sidebar.radio("Pilih halaman:", ["🏠 Beranda", "👥 Tentang Kami"])
-
-# Konten halaman utama
-if menu == "🏠 Beranda":
-    st.title("🌐 Selamat Datang di Aplikasi Kami")
-    st.write("Ini adalah halaman utama.")
-
-elif menu == "👥 Tentang Kami":
-    st.title("👥 Tentang Kelompok")
-    st.write("Ini adalah informasi tentang kelompok.")
-
-
 # Konfigurasi halaman utama
 st.set_page_config(
     page_title="Kalkulator Konsentrasi Larutan",
