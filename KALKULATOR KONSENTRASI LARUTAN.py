@@ -133,11 +133,11 @@ elif halaman == "👥 Identitas Kelompok":
             <p><b>📚 Nama Kelompok:</b> Kelompok 2 (PMIP 1E-1)</p>
             <p><b>👩‍🔬 Anggota:</b></p>
             <ul>
-                <li>👨‍🔬 Andika Daffa Arya Putra</li>
-                <li>👩‍🔬 Audrey Arva Callista</li>
-                <li>👩‍🔬 Maqdalene Tri Okta Dinanti Banjarnahor</li>
+                <li>👨‍🔬 Andika Daffa Arya Putra (2420574)</li>
+                <li>👩‍🔬 Audrey Arva Callista (2420577)</li>
+                <li>👩‍🔬 Maqdalene Tri Okta Dinanti Banjarnahor (2420620)</li>
                 <li>👨‍🔬 Raihan Ghani Priyananda (2420646)</li>
-                <li>👩‍🔬 Rifa Novita Putri Sulaeman</li>
+                <li>👩‍🔬 Rifa Novita Putri Sulaeman (2420652)</li>
             </ul>
         </div>
         """,
