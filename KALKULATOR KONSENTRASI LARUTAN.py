@@ -1,10 +1,13 @@
 import streamlit as st
+import streamlit as st
 
-# Konfigurasi halaman utama
+# Konfigurasi halaman
+st.set_page_config(page_title="Demo Sidebar Responsif", layout="wide")
+
+# CSS untuk sidebar responsif terhadap tema gelap/terang
 st.markdown(
     """
     <style>
-    /* Styling sidebar agar menyesuaikan mode perangkat */
     @media (prefers-color-scheme: dark) {
         section[data-testid="stSidebar"] {
             background-color: #1e1e1e;
@@ -23,6 +26,21 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Sidebar navigasi
+st.sidebar.title("📂 Menu Navigasi")
+menu = st.sidebar.radio("Pilih halaman:", ["🏠 Beranda", "👥 Tentang Kami"])
+
+# Konten halaman utama
+if menu == "🏠 Beranda":
+    st.title("🌐 Selamat Datang di Aplikasi Kami")
+    st.write("Ini adalah halaman utama.")
+
+elif menu == "👥 Tentang Kami":
+    st.title("👥 Tentang Kelompok")
+    st.write("Ini adalah informasi tentang kelompok.")
+
+
+# Konfigurasi halaman utama
 st.set_page_config(
     page_title="Kalkulator Konsentrasi Larutan",
     page_icon="⚗️",
