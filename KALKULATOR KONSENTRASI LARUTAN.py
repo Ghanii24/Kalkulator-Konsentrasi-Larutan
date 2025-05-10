@@ -125,7 +125,7 @@ elif halaman == "👥 Identitas Kelompok":
             background-color: transparent;
             border-radius: 12px;
             padding: 20px;
-            color: #333;
+            color: white;
             font-size: 18px;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
             text-align: left;
