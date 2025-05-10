@@ -122,7 +122,7 @@ elif halaman == "👥 Identitas Kelompok":
     st.markdown(
         """
         <div style="
-            background-color: white;
+            background-color: transparent;
             border-radius: 12px;
             padding: 20px;
             color: #333;
