@@ -1,30 +1,4 @@
 import streamlit as st
-import streamlit as st
-
-# Konfigurasi halaman
-st.set_page_config(page_title="Demo Sidebar Responsif", layout="wide")
-
-# CSS untuk sidebar responsif terhadap tema gelap/terang
-st.markdown(
-    """
-    <style>
-    @media (prefers-color-scheme: dark) {
-        section[data-testid="stSidebar"] {
-            background-color: #1e1e1e;
-            color: white;
-        }
-    }
-
-    @media (prefers-color-scheme: light) {
-        section[data-testid="stSidebar"] {
-            background-color: #f0f2f6;
-            color: black;
-        }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # Konfigurasi halaman utama
 st.set_page_config(
