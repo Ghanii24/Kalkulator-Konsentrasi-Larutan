@@ -26,7 +26,7 @@ halaman = st.sidebar.selectbox("📂 Navigasi Halaman", ["🔬 Kalkulator Konsen
 # Halaman 1: Kalkulator
 # =========================
 if halaman == "🔬 Kalkulator Konsentrasi":
-    st.title("⚗️ Kalkulator Konsentrasi Larutan 🧪")
+    st.title("⚗️ Kalkulator Konsentrasi Larutan")
     st.markdown("""
     Aplikasi ini membantu Anda menghitung berbagai jenis konsentrasi larutan:
 
