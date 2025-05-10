@@ -126,7 +126,7 @@ st.markdown(
 # =========================
 # Halaman 2: Identitas Kelompok
 # =========================
-elif halaman == "Identitas Kelompok":
+elif halaman == ("Identitas Kelompok"):
     st.title("👥 Identitas Kelompok")
     st.markdown("---")
     st.markdown(
