@@ -74,7 +74,7 @@ if halaman == "🔬 Kalkulator Konsentrasi":
         
         if st.button("🧮 Hitung PPM"):
             ppm = hitung_ppm(massa_zat, volume_larutan)
-            st.success(f"✅ Konsentrasi PPM: {ppm:.2f} mg/L")
+            st.success(f"✅ Konsentrasi PPM: {ppm:.4f} mg/L")
 
     elif "Molaritas (mol/L)" in choice:
         st.subheader("🧪 Perhitungan Molaritas")
@@ -92,7 +92,7 @@ if halaman == "🔬 Kalkulator Konsentrasi":
 
         if st.button("🧮 Hitung Molalitas"):
             molalitas = hitung_molalitas(mol_zat, massa_pelarut)
-            st.success(f"✅ Konsentrasi Molalitas: {molalitas:.2f} mol/kg")
+            st.success(f"✅ Konsentrasi Molalitas: {molalitas:.4f} mol/kg")
 
     elif "Normalitas" in choice:
         st.subheader("📏 Perhitungan Normalitas")
@@ -101,7 +101,7 @@ if halaman == "🔬 Kalkulator Konsentrasi":
 
         if st.button("🧮 Hitung Normalitas"):
             normalitas = hitung_normalitas(ekivalen, volume_larutan)
-            st.success(f"✅ Konsentrasi Normalitas: {normalitas:.2f} N")
+            st.success(f"✅ Konsentrasi Normalitas: {normalitas:.4f} N")
 
     elif "Molaritas (dari massa & Mr)" in choice:
         st.subheader("📘 Perhitungan Molaritas dari Massa & Mr")
@@ -111,7 +111,7 @@ if halaman == "🔬 Kalkulator Konsentrasi":
 
         if st.button("🧮 Hitung Molaritas dari Massa"):
             molaritas_massa = hitung_molaritas_dari_massa(massa_zat, mr, volume_larutan)
-            st.success(f"✅ Konsentrasi Molaritas: {molaritas_massa:.2f} mol/L")
+            st.success(f"✅ Konsentrasi Molaritas: {molaritas_massa:.4f} mol/L")
 
 # =========================
 # Halaman 2: Identitas Kelompok
