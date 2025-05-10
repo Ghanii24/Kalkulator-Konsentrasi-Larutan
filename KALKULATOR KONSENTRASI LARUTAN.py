@@ -20,7 +20,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Sidebar navigasi
-halaman = st.sidebar.selectbox("📂 Navigasi Halaman", ["🔬 Kalkulator Konsentrasi", "👥 Identitas Kelompok"])
+halaman = st.sidebar.selectbox("Select Here", ["🔬 Kalkulator Konsentrasi", "👥 Identitas Kelompok"])
 
 # =========================
 # Halaman 1: Kalkulator
