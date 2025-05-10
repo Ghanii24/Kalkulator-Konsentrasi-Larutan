@@ -1,4 +1,25 @@
 import streamlit as st
+st.markdown(
+    """
+    <style>
+    /* Styling sidebar agar menyesuaikan mode perangkat */
+    @media (prefers-color-scheme: dark) {
+        section[data-testid="stSidebar"] {
+            background-color: #1e1e1e;
+            color: white;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        section[data-testid="stSidebar"] {
+            background-color: #f0f2f6;
+            color: black;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Konfigurasi halaman utama
 st.set_page_config(
