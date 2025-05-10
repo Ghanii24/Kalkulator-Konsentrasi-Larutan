@@ -1,4 +1,51 @@
 import streamlit as st
+import streamlit as st
+
+# Konfigurasi halaman
+st.set_page_config(
+    page_title="Kalkulator Konsentrasi Larutan",
+    page_icon="⚗️",
+    layout="centered"
+)
+
+# ⬇️ Tambahkan CSS ini setelah set_page_config
+st.markdown("""
+    <style>
+    /* Tombol di mode terang */
+    @media (prefers-color-scheme: light) {
+        div.stButton > button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 0.5em 1.2em;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        div.stButton > button:hover {
+            background-color: #357ab7;
+        }
+    }
+
+    /* Tombol di mode gelap */
+    @media (prefers-color-scheme: dark) {
+        div.stButton > button {
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 0.5em 1.2em;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        div.stButton > button:hover {
+            background-color: #3b82f6;
+        }
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Lanjutkan ke sidebar, judul, kalkulator, dll...
 
 # Konfigurasi halaman utama
 st.set_page_config(
