@@ -136,7 +136,7 @@ elif halaman == "👥 Identitas Kelompok":
                 <li>👨‍🔬 Andika Daffa Arya Putra</li>
                 <li>👩‍🔬 Audrey Arva Callista</li>
                 <li>👩‍🔬 Maqdalene Tri Okta Dinanti Banjarnahor</li>
-                <li>👨‍🔬 Raihan Ghani Priyananda</li>
+                <li>👨‍🔬 Raihan Ghani Priyananda (2420646)</li>
                 <li>👩‍🔬 Rifa Novita Putri Sulaeman</li>
             </ul>
         </div>
