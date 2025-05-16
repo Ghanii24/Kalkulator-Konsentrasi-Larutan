@@ -138,7 +138,7 @@ elif halaman == "👥 Identitas Kelompok":
             box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
         ">
             <p><b>📚 Nama Kelompok:</b> Kelompok 2 (PMIP 1E-1)</p>
-            <p><b> 👨‍🔬👩‍🔬 Anggota:</b></p>
+            <p><b>👨‍🔬👩‍🔬 Anggota:</b></p>
             <ul>
                <li>👨‍🔬 Andika Daffa Arya Putra (2420572)</li>
                 <li>👩‍🔬 Audrey Arva Callista (2420577)</li>
