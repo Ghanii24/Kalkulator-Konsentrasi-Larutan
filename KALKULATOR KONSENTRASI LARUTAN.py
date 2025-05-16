@@ -1,32 +1,48 @@
 import streamlit as st
 
-# Konfigurasi halaman utama
+# Konfigurasi halaman
 st.set_page_config(
     page_title="Kalkulator Konsentrasi Larutan",
     page_icon="⚗️",
     layout="centered"
 )
-st.markdown("""
-    <style>
-    .stApp {
-        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-                    url('https://img.freepik.com/free-photo/side-view-hand-pouring-substance_23-2149731486.jpg?t=st=1746860017~exp=1746863617~hmac=f818fce0db537a021c6c9c2795193a245bf11bdb8deb3535c440fc783e29e887&w=1380');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: white !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
 
 # Sidebar navigasi
-halaman = st.sidebar.selectbox("Select Here", ["🔬 Kalkulator Konsentrasi", "👥 Identitas Kelompok"])
+halaman = st.sidebar.selectbox("📂 Navigasi Halaman", [
+    "🏠 Beranda", 
+    "🔬 Kalkulator Konsentrasi", 
+    "👥 Identitas Kelompok"
+])
 
 # =========================
-# Halaman 1: Kalkulator
+# Halaman Beranda
 # =========================
-if halaman == "🔬 Kalkulator Konsentrasi":
-    st.title("⚗️ Kalkulator Konsentrasi Larutan")
+if halaman == "🏠 Beranda":
+    st.title("🏠 Selamat Datang di Aplikasi Kalkulator Konsentrasi Larutan ⚗️")
+    st.markdown("""
+    ### 🎯 Tujuan Aplikasi
+    Aplikasi ini dibuat untuk membantu siswa, mahasiswa, dan tenaga pendidik dalam menghitung berbagai jenis konsentrasi larutan secara cepat dan akurat.
+
+    ### 🧪 Rumus yang Digunakan
+    - **PPM (Part per Million)**: `PPM = massa zat terlarut (mg) / volume larutan (L)`
+    - **Molaritas (M)**: `M = mol zat / volume larutan (L)`
+    - **Molalitas (m)**: `m = mol zat / massa pelarut (kg)`
+    - **Normalitas (N)**: `N = ekivalen zat / volume larutan (L)`
+    - **Molaritas dari Massa dan Mr**: `M = (massa zat / Mr) / volume larutan (L)`
+
+    ### 🧭 Petunjuk Penggunaan
+    Silakan gunakan **navigasi di kiri atas** (sidebar) untuk mengakses:
+    - Kalkulator konsentrasi
+    - Identitas kelompok
+
+    Terima kasih telah menggunakan aplikasi kami! 🙌
+    """)
+
+# =========================
+# Halaman Kalkulator
+# =========================
+elif halaman == "🔬 Kalkulator Konsentrasi":
+    st.title("⚗️ Kalkulator Konsentrasi Larutan 🧪")
     st.markdown("""
     Aplikasi ini membantu Anda menghitung berbagai jenis konsentrasi larutan:
 
@@ -35,11 +51,10 @@ if halaman == "🔬 Kalkulator Konsentrasi":
     - ⚖️ *Molalitas (mol/kg)*
     - 📏 *Normalitas (N)*
     - 📘 *Molaritas dari Massa & Mr*
-    
+
     Silakan pilih jenis perhitungan dan masukkan data yang diperlukan. 📥
     """)
 
-    # ==========Pilihan jenis perhitungan==========
     choice = st.selectbox("🔍 Pilih jenis konsentrasi yang ingin dihitung:", 
                           ["🟦 PPM (part per million)", 
                            "🧪 Molaritas (mol/L)", 
@@ -49,9 +64,8 @@ if halaman == "🔬 Kalkulator Konsentrasi":
 
     st.divider()
 
-    # ==========Fungsi perhitungan==========
     def hitung_ppm(massa_zat, volume_larutan):
-        return (massa_zat / volume_larutan)
+        return massa_zat / volume_larutan
 
     def hitung_molaritas(mol_zat, volume_larutan):
         return mol_zat / volume_larutan
@@ -66,12 +80,10 @@ if halaman == "🔬 Kalkulator Konsentrasi":
         mol = massa_zat / mr
         return mol / volume_larutan
 
-    # ==========Input dan output berdasarkan pilihan==========
     if "PPM" in choice:
         st.subheader("🟦 Perhitungan PPM")
         massa_zat = st.number_input("📦 Massa zat terlarut (mg)", min_value=0.0, step=0.01)
         volume_larutan = st.number_input("🧴 Volume larutan (liter)", min_value=0.0001, step=0.01)
-        
         if st.button("🧮 Hitung PPM"):
             ppm = hitung_ppm(massa_zat, volume_larutan)
             st.success(f"✅ Konsentrasi PPM: {ppm:.10g} mg/L")
@@ -80,7 +92,6 @@ if halaman == "🔬 Kalkulator Konsentrasi":
         st.subheader("🧪 Perhitungan Molaritas")
         mol_zat = st.number_input("🧬 Jumlah mol zat (mol)", min_value=0.0, step=0.01)
         volume_larutan = st.number_input("🧴 Volume larutan (liter)", min_value=0.0001, step=0.01)
-
         if st.button("🧮 Hitung Molaritas"):
             molaritas = hitung_molaritas(mol_zat, volume_larutan)
             st.success(f"✅ Konsentrasi Molaritas: {molaritas:.10g} mol/L")
@@ -89,7 +100,6 @@ if halaman == "🔬 Kalkulator Konsentrasi":
         st.subheader("⚖️ Perhitungan Molalitas")
         mol_zat = st.number_input("🧬 Jumlah mol zat (mol)", min_value=0.0, step=0.01)
         massa_pelarut = st.number_input("💧 Massa pelarut (kg)", min_value=0.0001, step=0.01)
-
         if st.button("🧮 Hitung Molalitas"):
             molalitas = hitung_molalitas(mol_zat, massa_pelarut)
             st.success(f"✅ Konsentrasi Molalitas: {molalitas:.10g} mol/kg")
@@ -98,7 +108,6 @@ if halaman == "🔬 Kalkulator Konsentrasi":
         st.subheader("📏 Perhitungan Normalitas")
         ekivalen = st.number_input("🧪 Jumlah ekivalen zat (mol ekivalen)", min_value=0.0, step=0.01)
         volume_larutan = st.number_input("🧴 Volume larutan (liter)", min_value=0.0001, step=0.01)
-
         if st.button("🧮 Hitung Normalitas"):
             normalitas = hitung_normalitas(ekivalen, volume_larutan)
             st.success(f"✅ Konsentrasi Normalitas: {normalitas:.10g} N")
@@ -108,13 +117,35 @@ if halaman == "🔬 Kalkulator Konsentrasi":
         massa_zat = st.number_input("⚖️ Massa zat (gram)", min_value=0.0, step=0.01)
         mr = st.number_input("🔬 Massa molar (Mr) zat (g/mol)", min_value=0.01, step=0.01)
         volume_larutan = st.number_input("🧴 Volume larutan (liter)", min_value=0.0001, step=0.01)
-
         if st.button("🧮 Hitung Molaritas dari Massa"):
             molaritas_massa = hitung_molaritas_dari_massa(massa_zat, mr, volume_larutan)
             st.success(f"✅ Konsentrasi Molaritas: {molaritas_massa:.10g} mol/L")
 
+    # Watermark
+    st.markdown(
+        """
+        <div style="
+            position: relative;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border-radius: 12px;
+            padding: 15px 25px;
+            color: #333333;
+            font-size: 16px;
+            margin-top: 30px;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.08);
+            text-align: left;
+        ">
+            <p>🧪✨ <b>Dibuat oleh kelompok:</b></p>
+            <p>👨‍🔬 <b>Andika</b> • 👩‍🔬 <b>Audrey</b> • 👩‍🔬 <b>Maqdalene</b> • 👨‍🔬 <b>Raihan</b> • 👩‍🔬 <b>Rifa</b></p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
 # =========================
-# Halaman 2: Identitas Kelompok
+# Halaman Identitas Kelompok
 # =========================
 elif halaman == "👥 Identitas Kelompok":
     st.title("👥 Identitas Kelompok")
@@ -122,23 +153,23 @@ elif halaman == "👥 Identitas Kelompok":
     st.markdown(
         """
         <div style="
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.0);
             border-radius: 12px;
             padding: 20px;
             color: white;
             font-size: 18px;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
-            text-align: left;
         ">
-            <p><b>📚 Nama Kelompok:</b> Kelompok 2 (PMIP 1E-1)</p>
+            <p><b>📚 Nama Kelompok:</b> Kelompok 5</p>
             <p><b>👩‍🔬 Anggota:</b></p>
             <ul>
-                <li>👨‍🔬 Andika Daffa Arya Putra (2420572)</li>
-                <li>👩‍🔬 Audrey Arva Callista (2420577)</li>
-                <li>👩‍🔬 Maqdalene Tri Okta Dinanti Banjarnahor (2420616)</li>
-                <li>👨‍🔬 Raihan Ghani Priyananda (2420646)</li>
-                <li>👩‍🔬 Rifa Novita Putri Sulaeman (2420652)</li>
+                <li>👨‍🔬 Andika</li>
+                <li>👩‍🔬 Audrey</li>
+                <li>👩‍🔬 Maqdalene</li>
+                <li>👨‍🔬 Raihan</li>
+                <li>👩‍🔬 Rifa</li>
             </ul>
+            <p>✨ Terima kasih telah menggunakan aplikasi kami! ✨</p>
         </div>
         """,
         unsafe_allow_html=True
