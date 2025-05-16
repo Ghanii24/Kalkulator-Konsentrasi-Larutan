@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 # Sidebar navigasi
-halaman = st.sidebar.selectbox("📂 Navigasi Halaman", [
+halaman = st.sidebar.selectbox("Select Here", [
     "🏠 Beranda", 
     "🔬 Kalkulator Konsentrasi", 
     "👥 Identitas Kelompok"
