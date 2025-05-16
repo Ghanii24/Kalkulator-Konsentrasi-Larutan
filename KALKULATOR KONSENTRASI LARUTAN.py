@@ -42,7 +42,7 @@ if halaman == "🏠 Beranda":
 # Halaman Kalkulator
 # =========================
 elif halaman == "🔬 Kalkulator Konsentrasi":
-    st.title("⚗️ Kalkulator Konsentrasi Larutan 🧪")
+    st.title("⚗️ Kalkulator Konsentrasi Larutan")
     st.markdown("""
     Aplikasi ini membantu Anda menghitung berbagai jenis konsentrasi larutan:
 
