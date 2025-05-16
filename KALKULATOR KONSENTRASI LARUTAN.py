@@ -23,7 +23,7 @@ if halaman == "🏠 Beranda":
     ### 🎯 Tujuan Aplikasi
     Aplikasi ini dibuat untuk membantu siswa, mahasiswa, dan tenaga pendidik dalam menghitung berbagai jenis konsentrasi larutan secara cepat dan akurat.
 
-    ### 🧪 Rumus yang Digunakan
+    ### 🔢 Rumus yang Digunakan
     - **PPM (Part per Million)**: `PPM = massa zat terlarut (mg) / volume larutan (L)`
     - **Molaritas (M)**: `M = mol zat / volume larutan (L)`
     - **Molalitas (m)**: `m = mol zat / massa pelarut (kg)`
