@@ -18,7 +18,7 @@ halaman = st.sidebar.selectbox("Select Here", [
 # Halaman Beranda
 # =========================
 if halaman == "🏠 Beranda":
-    st.title("🏠 Selamat Datang di Aplikasi Kalkulator Konsentrasi Larutan ⚗️")
+    st.title("🏠 Selamat Datang di Aplikasi Kalkulator Konsentrasi Larutan")
     st.markdown("""
     ### 🎯 Tujuan Aplikasi
     Aplikasi ini dibuat untuk membantu siswa, mahasiswa, dan tenaga pendidik dalam menghitung berbagai jenis konsentrasi larutan secara cepat dan akurat.
