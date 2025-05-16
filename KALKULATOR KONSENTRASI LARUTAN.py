@@ -130,24 +130,25 @@ elif halaman == "👥 Identitas Kelompok":
     st.markdown(
         """
         <div style="
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.0);
             border-radius: 12px;
             padding: 20px;
             color: white;
             font-size: 18px;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
-            text-align: left;
         ">
             <p><b>📚 Nama Kelompok:</b> Kelompok 2 (PMIP 1E-1)</p>
             <p><b>👩‍🔬 Anggota:</b></p>
             <ul>
-                <li>👨‍🔬 Andika Daffa Arya Putra (2420572)</li>
+               <li>👨‍🔬 Andika Daffa Arya Putra (2420572)</li>
                 <li>👩‍🔬 Audrey Arva Callista (2420577)</li>
                 <li>👩‍🔬 Maqdalene Tri Okta Dinanti Banjarnahor (2420616)</li>
                 <li>👨‍🔬 Raihan Ghani Priyananda (2420646)</li>
                 <li>👩‍🔬 Rifa Novita Putri Sulaeman (2420652)</li>
+
             </ul>
+            <p>✨ Terima kasih telah menggunakan aplikasi kami! ✨</p>
         </div>
         """,
         unsafe_allow_html=True
-    )
+    )
