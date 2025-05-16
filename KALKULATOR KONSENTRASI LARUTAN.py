@@ -145,9 +145,6 @@ elif halaman == "👥 Identitas Kelompok":
                 <li>👩‍🔬 Maqdalene Tri Okta Dinanti Banjarnahor (2420616)</li>
                 <li>👨‍🔬 Raihan Ghani Priyananda (2420646)</li>
                 <li>👩‍🔬 Rifa Novita Putri Sulaeman (2420652)</li>
-
-            </ul>
-            <p>✨ Terima kasih telah menggunakan aplikasi kami! ✨</p>
         </div>
         """,
         unsafe_allow_html=True
